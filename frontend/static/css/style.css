@@ -1,0 +1,128 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 70vh;
+    background: linear-gradient(rgba(48, 63, 159, 0.8), rgba(26, 35, 126, 0.9)),
+                url('https://images.unsplash.com/photo-1518837695005-2083093ee35b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Card Styles */
+.card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+/* Form Styles */
+.input-field input:focus + label,
+.input-field textarea:focus + label {
+    color: #3f51b5 !important;
+}
+
+.input-field input:focus,
+.input-field textarea:focus {
+    border-bottom: 1px solid #3f51b5 !important;
+    box-shadow: 0 1px 0 0 #3f51b5 !important;
+}
+
+/* Radio Buttons */
+[type="radio"]:checked + span:after,
+[type="radio"].with-gap:checked + span:after {
+    background-color: #3f51b5;
+}
+
+[type="radio"]:checked + span:after,
+[type="radio"].with-gap:checked + span:before,
+[type="radio"].with-gap:checked + span:after {
+    border: 2px solid #3f51b5;
+}
+
+/* Buttons */
+.btn-large {
+    border-radius: 50px;
+    padding: 0 40px;
+    height: 54px;
+    line-height: 54px;
+}
+
+/* Image Preview */
+#imagePreview {
+    object-fit: cover;
+    border: 3px solid #e0e0e0;
+}
+
+/* Footer */
+.page-footer {
+    padding-top: 20px;
+}
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 600px) {
+    .hero-section {
+        height: 50vh;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .btn-large {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Materialize Customization */
+.sidenav {
+    background-color: #fff;
+}
+
+.sidenav li>a {
+    color: #333;
+}
+
+.sidenav li>a:hover {
+    background-color: rgba(63, 81, 181, 0.1);
+}
+
+/* Validation Messages */
+.helper-text {
+    color: #666;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3f51b5;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #303f9f;
+}
